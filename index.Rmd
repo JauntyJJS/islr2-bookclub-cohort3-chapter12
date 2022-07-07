@@ -41,7 +41,7 @@ opts_chunk$set(
   #fig.width = 6,
   #ig.asp = 0.618,
   #fig.show = 'hold',
-  cache = TRUE
+  cache = FALSE
   #dev = 'svglite'
 )
 
@@ -698,9 +698,113 @@ Caveats
 
 For this reason, it is important to run the algorithm multiple times from different random initial configurations. Then one selects the best solution, i.e. that for which $\sum_{k=1}^{K}W(C_k)$ is the smallest.
 
-Hierarchical clustering is an alternative approach to overcome some of the weakness of K-Means Clustering
+Hierarchical clustering is an alternative approach to overcome some of the weaknesses of K-Means Clustering
 
 ---
 
 # 12.4.2 Hierarchical Clustering
 
+Hierarchical clustering results in a tree-based representation of the observations, called a dendrogram. Each leaf of the dendrogram represents one observation. Clusters are obtained by cutting the dendrogram at a given height.
+
+```{r echo = FALSE, out.width="60%"}
+knitr::include_graphics("img/figure_12_11.jpg")
+```
+
+---
+
+# 12.4.2 Hierarchical Clustering
+
+In practice, people often look at the dendrogram and select by eye a sensible number of clusters, based on the heights of the fusion and the number of clusters desired.
+
+```{r echo = FALSE, out.width="60%"}
+knitr::include_graphics("img/figure_12_11.jpg")
+```
+
+---
+
+# 12.4.2 Hierarchical Clustering
+
+Each leaf of the dendrogram represents one observation. Starting out at the bottom of the dendrogram, each of the $n$ observations is treated as its own cluster.
+
+```{r echo = FALSE, out.width="60%"}
+knitr::include_graphics("img/hierarchical_clustering-step_1.jpg")
+```
+---
+
+# 12.4.2 Hierarchical Clustering
+
+The algorithm then measures all possible pairwise distance within the $n$ observations. 
+
+The two observations with the smallest distance is then classified as one cluster, giving a remaining of $``\hspace{0.1cm}n-1"$ observations
+
+```{r echo = FALSE, out.width="100%"}
+knitr::include_graphics("img/hierarchical_clustering-step_2.jpg")
+```
+
+---
+
+# 12.4.2 Hierarchical Clustering
+
+The algorithm continues until all observations are used.
+
+```{r echo = FALSE, out.width="60%"}
+knitr::include_graphics("img/hierarchial_cluatering_animation.gif")
+```
+
+Height of the blocks represents the distance between clusters.
+
+---
+
+# 12.4.2 Hierarchical Clustering
+
+How did we determine that the cluster $\{p5, p6\}$ should be fused with the cluster $\{p4\}$ ?
+
+```{r echo = FALSE, out.width="60%"}
+knitr::include_graphics("img/hierarchial_cluatering_animation_2.gif")
+```
+
+The concept of dissimilarity between a pair of observations needs to be extended to a pair of groups of observations. This extension is achieved by developing the notion of *linkage*,
+
+---
+
+# 12.4.2 Hierarchical Clustering
+
+.pull-left[
+Single-linkage: the distance between two clusters is defined as the shortest distance between two points in each cluster
+
+Complete-linkage: the distance between two clusters is defined as the longest distance between two points in each cluster.
+
+Average-linkage: the distance between two clusters is defined as the average distance between each point in one cluster to every point in the other cluster.
+
+Centroid-linkage: finds the centroid of cluster 1 and centroid of cluster 2, and then calculates the distance between the two before merging.
+]
+
+.pull-right[
+```{r echo = FALSE, out.width="70%"}
+knitr::include_graphics("img/linkages.jpg")
+```
+[Kavana Rudresh GitHub](https://github.com/kavana-r/RLadies_Hierarchical_Clustering)
+]
+
+---
+
+# 12.4.3 Practical Issues in Clustering
+
+Should the observations or features be standardized to have standard deviation of one ?
+
+In the case of hierarchical clustering,
+* What dissimilarity measure should be used ?
+* What type of linkage should be used ?
+* Where should we cut the dendrogram in order to obtain clusters ?
+
+In the case of K-means clustering, 
+* How many clusters should we look for in the data ?
+
+---
+
+# 12.4.3 Practical Issues in Clustering
+
+Kmeans and hierarchical clustering force every observation into a cluster, the
+clusters found may be heavily distorted due to the presence of outliers that do not belong to any cluster.
+
+Clustering methods generally are not very robust to perturbations to the data. We recommend clustering subsets of the data in order to get a sense of the robustness of the clusters obtained.
