@@ -593,6 +593,16 @@ clustering approaches:
 
 ---
 
+# 12.4 Clustering Methods
+
+```{r echo = FALSE, out.width="60%"}
+knitr::include_graphics("img/clustering_goal.jpg")
+```
+
+[Francesco Archetti's slides](https://www.slideserve.com/macy-holden/metodi-numerici-per-la-bioinformatica)
+
+---
+
 # 12.4.1 K-Means Clustering
 
 .pull-left[
@@ -783,8 +793,68 @@ Centroid-linkage: finds the centroid of cluster 1 and centroid of cluster 2, and
 ```{r echo = FALSE, out.width="70%"}
 knitr::include_graphics("img/linkages.jpg")
 ```
-[Kavana Rudresh GitHub](https://github.com/kavana-r/RLadies_Hierarchical_Clustering)
+[Kavana Rudresh GitHub for R-Ladies Philly](https://github.com/kavana-r/RLadies_Hierarchical_Clustering)
 ]
+
+---
+
+# 12.4.2 Hierarchical Clustering
+
+.pull-left[
+[Mustafa Murat's Hierarchical clustering slides](https://mmuratarat.github.io/2020-05-23/hierarchical_clustering)
+]
+
+.pull-right[
+```{r echo = FALSE, out.width="80%"}
+knitr::include_graphics("img/linkages_example.jpg")
+```
+]
+
+---
+
+# 12.4.2 Hierarchical Clustering
+
+```{r echo = FALSE, out.width="70%"}
+knitr::include_graphics("img/figure_12_14.jpg")
+```
+
+---
+
+# 12.4.2 Hierarchical Clustering
+
+```{r echo = FALSE, out.width="70%"}
+knitr::include_graphics("img/linkages_pros_and_cons.jpg")
+```
+
+---
+
+# 12.4.3 Practical Issues in Clustering
+
+```{r echo = FALSE, out.width="70%"}
+knitr::include_graphics("img/subjective.jpg")
+```
+
+[Kavana Rudresh GitHub for R-Ladies Philly](https://github.com/kavana-r/RLadies_Hierarchical_Clustering)
+
+---
+
+# 12.4.3 Practical Issues in Clustering
+
+```{r echo = FALSE, out.width="70%"}
+knitr::include_graphics("img/subjective_2.jpg")
+```
+
+[Mustafa Murat's Hierarchical clustering slides](https://mmuratarat.github.io/2020-05-23/hierarchical_clustering)
+
+---
+
+# 12.4.2 Hierarchical Clustering
+
+Different dissimilarity measure gives different clusters.
+
+```{r echo = FALSE, out.width="60%"}
+knitr::include_graphics("img/figure_12_15.jpg")
+```
 
 ---
 
