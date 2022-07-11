@@ -599,7 +599,7 @@ clustering approaches:
 knitr::include_graphics("img/clustering_goal.jpg")
 ```
 
-[Francesco Archetti's slides](https://www.slideserve.com/macy-holden/metodi-numerici-per-la-bioinformatica)
+Image from [Francesco Archetti's slides](https://www.slideserve.com/macy-holden/metodi-numerici-per-la-bioinformatica)
 
 ---
 
@@ -620,6 +620,8 @@ $$\sum_{j=1}^{p}(x_{ij}-x_{i'j})^2$$
 knitr::include_graphics("img/euclidean_distance.jpg")
 ```
 ]
+
+Image from [Wikipedia](https://en.wikipedia.org/wiki/Euclidean_distance)
 
 ---
 
@@ -739,6 +741,8 @@ Each leaf of the dendrogram represents one observation. Starting out at the bott
 ```{r echo = FALSE, out.width="60%"}
 knitr::include_graphics("img/hierarchical_clustering-step_1.jpg")
 ```
+
+Image from Kavana Rudresh [GitHub page]((https://github.com/kavana-r/RLadies_Hierarchical_Clustering) for [R-Ladies Philly](https://www.youtube.com/RLadiesPhilly)
 ---
 
 # 12.4.2 Hierarchical Clustering
@@ -751,6 +755,7 @@ The two observations with the smallest distance is then classified as one cluste
 knitr::include_graphics("img/hierarchical_clustering-step_2.jpg")
 ```
 
+Image from Kavana Rudresh [GitHub page]((https://github.com/kavana-r/RLadies_Hierarchical_Clustering) for [R-Ladies Philly](https://www.youtube.com/RLadiesPhilly)
 ---
 
 # 12.4.2 Hierarchical Clustering
@@ -762,6 +767,8 @@ knitr::include_graphics("img/hierarchial_cluatering_animation.gif")
 ```
 
 Height of the blocks represents the distance between clusters.
+
+Image from Kavana Rudresh [GitHub page]((https://github.com/kavana-r/RLadies_Hierarchical_Clustering) for [R-Ladies Philly](https://www.youtube.com/RLadiesPhilly)
 
 ---
 
@@ -775,6 +782,7 @@ knitr::include_graphics("img/hierarchial_cluatering_animation_2.gif")
 
 The concept of dissimilarity between a pair of observations needs to be extended to a pair of groups of observations. This extension is achieved by developing the notion of *linkage*,
 
+Image from Kavana Rudresh [GitHub page]((https://github.com/kavana-r/RLadies_Hierarchical_Clustering) for [R-Ladies Philly](https://www.youtube.com/RLadiesPhilly)
 ---
 
 # 12.4.2 Hierarchical Clustering
@@ -793,15 +801,15 @@ Centroid-linkage: finds the centroid of cluster 1 and centroid of cluster 2, and
 ```{r echo = FALSE, out.width="70%"}
 knitr::include_graphics("img/linkages.jpg")
 ```
-[Kavana Rudresh GitHub for R-Ladies Philly](https://github.com/kavana-r/RLadies_Hierarchical_Clustering)
-]
 
+Image from Kavana Rudresh [GitHub page]((https://github.com/kavana-r/RLadies_Hierarchical_Clustering) for [R-Ladies Philly](https://www.youtube.com/RLadiesPhilly)
+]
 ---
 
 # 12.4.2 Hierarchical Clustering
 
 .pull-left[
-[Mustafa Murat's Hierarchical clustering slides](https://mmuratarat.github.io/2020-05-23/hierarchical_clustering)
+Mustafa Murat's [Hierarchical clustering slides](https://mmuratarat.github.io/2020-05-23/hierarchical_clustering)
 ]
 
 .pull-right[
@@ -826,6 +834,8 @@ knitr::include_graphics("img/figure_12_14.jpg")
 knitr::include_graphics("img/linkages_pros_and_cons.jpg")
 ```
 
+Image from Kavana Rudresh [GitHub page]((https://github.com/kavana-r/RLadies_Hierarchical_Clustering) for [R-Ladies Philly](https://www.youtube.com/RLadiesPhilly)
+
 ---
 
 # 12.4.3 Practical Issues in Clustering
@@ -834,7 +844,7 @@ knitr::include_graphics("img/linkages_pros_and_cons.jpg")
 knitr::include_graphics("img/subjective.jpg")
 ```
 
-[Kavana Rudresh GitHub for R-Ladies Philly](https://github.com/kavana-r/RLadies_Hierarchical_Clustering)
+Image from Kavana Rudresh [GitHub page]((https://github.com/kavana-r/RLadies_Hierarchical_Clustering) for [R-Ladies Philly](https://www.youtube.com/RLadiesPhilly)
 
 ---
 
@@ -844,7 +854,7 @@ knitr::include_graphics("img/subjective.jpg")
 knitr::include_graphics("img/subjective_2.jpg")
 ```
 
-[Mustafa Murat's Hierarchical clustering slides](https://mmuratarat.github.io/2020-05-23/hierarchical_clustering)
+Mustafa Murat's [Hierarchical clustering slides](https://mmuratarat.github.io/2020-05-23/hierarchical_clustering)
 
 ---
 
