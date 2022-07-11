@@ -273,6 +273,25 @@ How many principal components is enough ? Typically decided using the scree plot
 
 ---
 
+# 12.2.4 More on PCA
+
+&lt;img src="img/pca_disadvantages.jpg" width="60%" style="display: block; margin: auto;" /&gt;
+
+Image from Nature's [Points of Significance](https://www.nature.com/collections/qghhqm/pointsofsignificance) Series [Principal component analysis](https://www.nature.com/articles/nmeth.4346)
+
+---
+
+# 12.2.4 More on PCA
+
+.pull-left[
+Image from [Ten quick tips for effective dimensionality reduction](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006907)
+]
+
+.pull-right[
+&lt;img src="img/pca_tips.jpg" width="100%" style="display: block; margin: auto;" /&gt;
+]
+---
+
 # 12.3 Missing Values and Matrix Completion
 
 It is possible for datasets to have missing values. Unfortunately, the statistical learning methods that we have seen in this book cannot handle missing values. 
@@ -299,8 +318,8 @@ data &lt;- data.frame(
 ```
 ]
 .pull-right[
-<div id="htmlwidget-013042ca0b24e9b343c3" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-013042ca0b24e9b343c3">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,-1,-1,1,1,3],"DBP":[-4,-2,0,0,2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric"},{"accessor":"DBP","name":"DBP","type":"numeric"}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"c52affd09e356c757a895355cb8ca44d"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-a01a0aab368369aa4c2f" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-a01a0aab368369aa4c2f">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,-1,-1,1,1,3],"DBP":[-4,-2,0,0,2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"70b9f792dae02a270ba873e526d1b3c0"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 ]
 ]
 
@@ -315,8 +334,8 @@ missing_data &lt;- data.frame(
 ```
 ]
 .pull-right[
-<div id="htmlwidget-ef8e15f5a4678c9241d5" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-ef8e15f5a4678c9241d5">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,"NA",-1,1,1,"NA"],"DBP":["NA",-2,0,"NA",2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric"},{"accessor":"DBP","name":"DBP","type":"numeric"}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"3e2c3e3d21455b4133e1d85eb97d2eb0"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-5ccef1ae33e07b16b354" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-5ccef1ae33e07b16b354">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,"NA",-1,1,1,"NA"],"DBP":["NA",-2,0,"NA",2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"5896e8035ba6eec89699d410df60b29c"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 ]
 ]
 
@@ -333,8 +352,8 @@ initialisation_data &lt;- data.frame(
 ```
 ]
 .pull-right[
-<div id="htmlwidget-bd820098160ae49e6650" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-bd820098160ae49e6650">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,-0.5,-1,1,1,-0.5],"DBP":[1,-2,0,1,2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric"},{"accessor":"DBP","name":"DBP","type":"numeric"}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"99dd86cd65fdb193b6ba51bb08cdcc25"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-47bef4584a3d86ddffec" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-47bef4584a3d86ddffec">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,-0.5,-1,1,1,-0.5],"DBP":[1,-2,0,1,2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"641e091f233eeeecec3764e8b5316e23"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 ]
 ]
 ]
@@ -355,8 +374,8 @@ initialisation_data &lt;- data.frame(
 ```
 ]
 .pull-right[
-<div id="htmlwidget-04852f445a67c5d3eb49" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-04852f445a67c5d3eb49">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,-0.5,-1,1,1,-0.5],"DBP":[1,-2,0,1,2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric"},{"accessor":"DBP","name":"DBP","type":"numeric"}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"99dd86cd65fdb193b6ba51bb08cdcc25"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-97c316acab0f641b257f" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-97c316acab0f641b257f">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,-0.5,-1,1,1,-0.5],"DBP":[1,-2,0,1,2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"641e091f233eeeecec3764e8b5316e23"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 ]
 ]
 .panel.panel[.panel-name[Loadings Inverse]
@@ -377,12 +396,12 @@ initialisation_data_loadings_inverse &lt;-
 ```
 ]
 .pull-right[
-<div id="htmlwidget-e9bde8e5d70388bec6ed" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-e9bde8e5d70388bec6ed">{"x":{"tag":{"name":"Reactable","attribs":{"data":{".rownames":["SBP","DBP"],"PC1":[0.207591487517845,0.978215607271796],"PC2":[-0.978215607271796,0.207591487517845]},"columns":[{"accessor":".rownames","name":"","type":"character","sortable":false,"filterable":false,"rowHeader":true},{"accessor":"PC1","name":"PC1","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"PC2","name":"PC2","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":2,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"dd9d92801eccf7e4d9eb42ef540ce0b7"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-e3d97b9940fbb14c28cb" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-e3d97b9940fbb14c28cb">{"x":{"tag":{"name":"Reactable","attribs":{"data":{".rownames":["SBP","DBP"],"PC1":[0.207591487517845,0.978215607271796],"PC2":[-0.978215607271796,0.207591487517845]},"columns":[{"accessor":".rownames","name":"","type":"character","sortable":false,"filterable":false,"rowHeader":true},{"accessor":"PC1","name":"PC1","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"PC2","name":"PC2","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":2,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"dd9d92801eccf7e4d9eb42ef540ce0b7"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 &lt;br&gt;
 &lt;br&gt;
-<div id="htmlwidget-058729350b0274ba321b" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-058729350b0274ba321b">{"x":{"tag":{"name":"Reactable","attribs":{"data":{".rownames":["PC1"],"SBP":[0.207591487517845],"DBP":[0.978215607271796]},"columns":[{"accessor":".rownames","name":"","type":"character","sortable":false,"filterable":false,"rowHeader":true},{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":2,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"0e93de6f1d6422bfc1c9e47609da508b"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-c85c1a841dc67d557f99" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-c85c1a841dc67d557f99">{"x":{"tag":{"name":"Reactable","attribs":{"data":{".rownames":["PC1"],"SBP":[0.207591487517845],"DBP":[0.978215607271796]},"columns":[{"accessor":".rownames","name":"","type":"character","sortable":false,"filterable":false,"rowHeader":true},{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":2,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"0e93de6f1d6422bfc1c9e47609da508b"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 ]
 ]
 .panel.panel[.panel-name[Scores]
@@ -397,8 +416,8 @@ initialisation_data_scores &lt;-
 ```
 ]
 .pull-right[
-<div id="htmlwidget-59fcf4dbc62bd3d82d42" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-59fcf4dbc62bd3d82d42">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"PC1":[-0.518978718794612,-2.93464682181539,-1.08201135103072,0.311387231276767,1.28960283854856,2.93464682181539]},"columns":[{"accessor":"PC1","name":"PC1","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"6819971fbd1482e29274a6d73ef74c0c"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-77ff79819c05a5d91a1c" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-77ff79819c05a5d91a1c">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"PC1":[-0.518978718794612,-2.93464682181539,-1.08201135103072,0.311387231276767,1.28960283854856,2.93464682181539]},"columns":[{"accessor":"PC1","name":"PC1","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"6819971fbd1482e29274a6d73ef74c0c"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 ]
 ]
 .panel.panel[.panel-name[Estimated Data]
@@ -410,8 +429,8 @@ estimated_data_1 &lt;-
 ```
 ]
 .pull-right[
-<div id="htmlwidget-eb5f9b50dc4ef47ccb2f" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-eb5f9b50dc4ef47ccb2f">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-0.107735564224679,-0.609207699080172,-0.22461634587166,0.0646413385348073,0.267710571561531,0.609207699080172],"DBP":[-0.50767308256681,-2.87071732293039,-1.05844039082349,0.304603849540086,1.26150962385021,2.87071732293039]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"5f1a1271350f5a1a071e9306741cc155"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-6d4d56274588830acc58" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-6d4d56274588830acc58">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-0.107735564224679,-0.609207699080172,-0.22461634587166,0.0646413385348073,0.267710571561531,0.609207699080172],"DBP":[-0.50767308256681,-2.87071732293039,-1.05844039082349,0.304603849540086,1.26150962385021,2.87071732293039]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"5f1a1271350f5a1a071e9306741cc155"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 ]
 ]
 .panel.panel[.panel-name[Objective]
@@ -449,11 +468,815 @@ iteration_2_data &lt;- data.frame(
 ```
 ]
 .pull-right[
-<div id="htmlwidget-b9dd18c039cc92419142" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-b9dd18c039cc92419142">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,-0.61,-1,1,1,0.61],"DBP":[-0.51,-2,0,0.3,2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"eab9e6ef7c886bb46bcd005ee013b00c"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-9d77707747483cee0c15" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-9d77707747483cee0c15">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,-0.61,-1,1,1,0.61],"DBP":[-0.51,-2,0,0.3,2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"eab9e6ef7c886bb46bcd005ee013b00c"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 ]
 ]
 ]
+
+---
+
+# 12.3 Missing Values and Matrix Completion
+
+.panelset[
+.panel.panel[.panel-name[Iteration 2 Data]
+.pull-left[
+
+```r
+iteration_2_data &lt;- data.frame(
+  SBP = c(-3, -0.61, -1, 1, 1, 0.61),
+  DBP = c(-0.51, -2, 0, 0.3, 2, 4)
+)
+```
+]
+.pull-right[
+<div id="htmlwidget-fe4b4a74ef84adb89b70" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-fe4b4a74ef84adb89b70">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,-0.61,-1,1,1,0.61],"DBP":[-0.51,-2,0,0.3,2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"eab9e6ef7c886bb46bcd005ee013b00c"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+]
+]
+
+.panel.panel[.panel-name[Loadings Inverse]
+.pull-left[
+
+```r
+iteration_2_pca &lt;- 
+  prcomp(iteration_2_data)
+
+iteration_2_loadings &lt;- 
+  iteration_2_pca$rotation
+```
+
+
+```r
+iteration_2_inverse &lt;- 
+  solve(iteration_2_loadings)["PC1",,drop = FALSE]
+```
+]
+.pull-right[
+<div id="htmlwidget-311c9b16b2c91a8d3810" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-311c9b16b2c91a8d3810">{"x":{"tag":{"name":"Reactable","attribs":{"data":{".rownames":["SBP","DBP"],"PC1":[0.504264717557062,0.863549126933203],"PC2":[-0.863549126933203,0.504264717557062]},"columns":[{"accessor":".rownames","name":"","type":"character","sortable":false,"filterable":false,"rowHeader":true},{"accessor":"PC1","name":"PC1","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"PC2","name":"PC2","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":2,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"10d56262bf882bb3d7e62da5e03c2d5d"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+&lt;br&gt;
+&lt;br&gt;
+<div id="htmlwidget-7ebaf0746c1d1b910744" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-7ebaf0746c1d1b910744">{"x":{"tag":{"name":"Reactable","attribs":{"data":{".rownames":["PC1"],"SBP":[0.504264717557061],"DBP":[0.863549126933203]},"columns":[{"accessor":".rownames","name":"","type":"character","sortable":false,"filterable":false,"rowHeader":true},{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":2,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"ed60641ef102068e1811fb30970ad1e1"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+]
+]
+
+.panel.panel[.panel-name[Scores]
+.pull-left[
+
+```r
+# iteration_2_pca &lt;- 
+#   prcomp(iteration_2_data)
+
+iteration_2_scores &lt;- 
+  iteration_2_pca$x[,"PC1",drop = FALSE]
+```
+]
+.pull-right[
+<div id="htmlwidget-414436b29f88b2bfacbd" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-414436b29f88b2bfacbd">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"PC1":[-2.33059116673424,-2.41208669090333,-0.881651676884181,0.385942496309903,1.85397601209635,3.3844110261155]},"columns":[{"accessor":"PC1","name":"PC1","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"6ee113b4d5e2253fff0784c96c246f23"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+]
+]
+.panel.panel[.panel-name[Estimated Data]
+.pull-left[
+
+```r
+estimated_data_2 &lt;- 
+  iteration_2_scores %*% iteration_2_loadings_inverse
+```
+]
+.pull-right[
+<div id="htmlwidget-5c4670d465695ea74aaa" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-5c4670d465695ea74aaa">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-1.17523489643422,-1.21633021391152,-0.444585833827711,0.194617183894981,0.934894690097332,1.70663907018114],"DBP":[-2.01257996727159,-2.08295535601677,-0.761349535832529,0.333280305734838,1.6009993666009,2.92260518678514]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"a6076e4a53c7caf1dbf6c78c35ae04a3"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+]
+]
+.panel.panel[.panel-name[Objective]
+.pull-left[
+
+```r
+objective_2 &lt;- 
+  sum((missing_data - estimated_data_2)^2, na.rm = TRUE)
+```
+]
+.pull-right[
+
+```
+#&gt; [1] 6.197649
+```
+]
+]
+.panel.panel[.panel-name[Iteration 3 Data]
+.pull-left[
+
+```r
+data &lt;- data.frame(
+  SBP = c(-3,-1,-1, 1, 1, 3),
+  DBP = c(-4,-2, 0, 0, 2, 4))
+
+missing_data &lt;- data.frame(
+  SBP = c(-3, NA, -1, 1, 1, NA),
+  DBP = c(NA, -2, 0, NA, 2, 4)
+)
+
+iteration_3_data &lt;- data.frame(
+  SBP = c(-3, -1.22, -1, 1, 1, 1.71),
+  DBP = c(-2.01, -2, 0, 0.33, 2, 4)
+)
+```
+]
+.pull-right[
+<div id="htmlwidget-e8edb4ebf5d0f2e0920f" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-e8edb4ebf5d0f2e0920f">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,-1.22,-1,1,1,1.71],"DBP":[-2.01,-2,0,0.33,2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"7b442c22afa265bb3e294fcdb48a5aa6"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+]
+]
+
+]
+
+---
+
+# 12.3 Missing Values and Matrix Completion
+
+.panelset[
+.panel.panel[.panel-name[Iteration 3 Data]
+.pull-left[
+
+```r
+iteration_3_data &lt;- data.frame(
+  SBP = c(-3, -1.22, -1, 1, 1, 1.71),
+  DBP = c(-2.01, -2, 0, 0.33, 2, 4)
+)
+```
+]
+.pull-right[
+<div id="htmlwidget-1e845f92f77e9df85dd9" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-1e845f92f77e9df85dd9">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,-1.22,-1,1,1,1.71],"DBP":[-2.01,-2,0,0.33,2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"7b442c22afa265bb3e294fcdb48a5aa6"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+]
+]
+
+.panel.panel[.panel-name[Loadings Inverse]
+.pull-left[
+
+```r
+iteration_3_pca &lt;- 
+  prcomp(iteration_3_data)
+
+iteration_3_loadings &lt;- 
+  iteration_3_pca$rotation
+```
+
+
+```r
+iteration_3_inverse &lt;- 
+  solve(iteration_3_loadings)["PC1",,drop = FALSE]
+```
+]
+.pull-right[
+<div id="htmlwidget-b40ffa9438883fcdfcc2" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-b40ffa9438883fcdfcc2">{"x":{"tag":{"name":"Reactable","attribs":{"data":{".rownames":["SBP","DBP"],"PC1":[0.5940538959427,0.804425241222141],"PC2":[-0.804425241222141,0.5940538959427]},"columns":[{"accessor":".rownames","name":"","type":"character","sortable":false,"filterable":false,"rowHeader":true},{"accessor":"PC1","name":"PC1","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"PC2","name":"PC2","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":2,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"f0137c9e4c1e02ea52a6cf86b677a6a6"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+&lt;br&gt;
+&lt;br&gt;
+<div id="htmlwidget-aba3bf0a5b819d6a2d0c" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-aba3bf0a5b819d6a2d0c">{"x":{"tag":{"name":"Reactable","attribs":{"data":{".rownames":["PC1"],"SBP":[0.5940538959427],"DBP":[0.804425241222141]},"columns":[{"accessor":".rownames","name":"","type":"character","sortable":false,"filterable":false,"rowHeader":true},{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":2,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"32bb5685a3a26caf593c86df335dfcc8"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+]
+]
+
+.panel.panel[.panel-name[Scores]
+.pull-left[
+
+```r
+# iteration_3_pca &lt;- 
+#   prcomp(iteration_3_data)
+
+iteration_3_scores &lt;- 
+  iteration_3_pca$x[,"PC1",drop = FALSE]
+```
+]
+.pull-right[
+<div id="htmlwidget-d271dd67c880aa5adc64" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-d271dd67c880aa5adc64">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"PC1":[-3.56059728547825,-2.49513709828802,-0.755594758736348,0.697973362752358,2.04136351559333,4.07199226415693]},"columns":[{"accessor":"PC1","name":"PC1","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"41a61c335aac6a35b8f84f7f819da078"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+]
+]
+.panel.panel[.panel-name[Estimated Data]
+.pull-left[
+
+```r
+estimated_data_3 &lt;- 
+  iteration_3_scores %*% iteration_3_loadings_inverse
+```
+]
+.pull-right[
+<div id="htmlwidget-20645634afdcb6176131" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-20645634afdcb6176131">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-2.11518668932136,-1.48224591414916,-0.448864010181212,0.414633795407265,1.21267994947351,2.41898286877096],"DBP":[-2.86423433026574,-2.00715126217266,-0.607819496062673,0.561467390698694,1.64212433845325,3.27561335934913]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"7fcf8533f380e2a84738e28623b29276"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+]
+]
+.panel.panel[.panel-name[Objective]
+.pull-left[
+
+```r
+objective_3 &lt;- 
+  sum((missing_data - estimated_data_3)^2, na.rm = TRUE)
+```
+]
+.pull-right[
+
+```
+#&gt; [1] 2.496839
+```
+]
+]
+.panel.panel[.panel-name[Iteration 4 Data]
+.pull-left[
+
+```r
+data &lt;- data.frame(
+  SBP = c(-3,-1,-1, 1, 1, 3),
+  DBP = c(-4,-2, 0, 0, 2, 4))
+
+missing_data &lt;- data.frame(
+  SBP = c(-3, NA, -1, 1, 1, NA),
+  DBP = c(NA, -2, 0, NA, 2, 4)
+)
+
+iteration_4_data &lt;- data.frame(
+  SBP = c(-3, -1.48, -1, 1, 1, 2.41),
+  DBP = c(-2.86, -2, 0, 0.56, 2, 4)
+)
+```
+]
+.pull-right[
+<div id="htmlwidget-fde98eb3786f2f29cbe2" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-fde98eb3786f2f29cbe2">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,-1.48,-1,1,1,2.41],"DBP":[-2.86,-2,0,0.56,2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"8e094c54f7415dca86b5537a51ffaad8"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+]
+]
+]
+
+---
+
+# 12.3 Missing Values and Matrix Completion
+
+.panelset[
+.panel.panel[.panel-name[Iteration 4 Data]
+.pull-left[
+
+```r
+iteration_4_data &lt;- data.frame(
+  SBP = c(-3, -1.48, -1, 1, 1, 2.41),
+  DBP = c(-2.86, -2, 0, 0.56, 2, 4)
+)
+```
+]
+.pull-right[
+<div id="htmlwidget-50ece9ee2c176e5e166e" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-50ece9ee2c176e5e166e">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,-1.48,-1,1,1,2.41],"DBP":[-2.86,-2,0,0.56,2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"8e094c54f7415dca86b5537a51ffaad8"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+]
+]
+
+.panel.panel[.panel-name[Loadings Inverse]
+.pull-left[
+
+```r
+iteration_4_pca &lt;- 
+  prcomp(iteration_4_data)
+
+iteration_4_loadings &lt;- 
+  iteration_4_pca$rotation
+```
+
+
+```r
+iteration_4_inverse &lt;- 
+  solve(iteration_4_loadings)["PC1",,drop = FALSE]
+```
+]
+.pull-right[
+<div id="htmlwidget-ee3ad5c6c5164eda965c" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-ee3ad5c6c5164eda965c">{"x":{"tag":{"name":"Reactable","attribs":{"data":{".rownames":["SBP","DBP"],"PC1":[0.614006553899846,0.789300925989597],"PC2":[-0.789300925989597,0.614006553899846]},"columns":[{"accessor":".rownames","name":"","type":"character","sortable":false,"filterable":false,"rowHeader":true},{"accessor":"PC1","name":"PC1","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"PC2","name":"PC2","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":2,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"416cf1d12cb144a0724f33a93a39d1dd"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+&lt;br&gt;
+&lt;br&gt;
+<div id="htmlwidget-1524e8786d5dd71131d2" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-1524e8786d5dd71131d2">{"x":{"tag":{"name":"Reactable","attribs":{"data":{".rownames":["PC1"],"SBP":[0.614006553899846],"DBP":[0.789300925989597]},"columns":[{"accessor":".rownames","name":"","type":"character","sortable":false,"filterable":false,"rowHeader":true},{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":2,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"7dabafbf714b804b7f49eba97daf09d6"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+]
+]
+
+.panel.panel[.panel-name[Scores]
+.pull-left[
+
+```r
+# iteration_4_pca &lt;- 
+#   prcomp(iteration_4_data)
+
+iteration_4_scores &lt;- 
+  iteration_4_pca$x[,"PC1",drop = FALSE]
+```
+]
+.pull-right[
+<div id="htmlwidget-c76e532da2befd641df5" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-c76e532da2befd641df5">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"PC1":[-4.21355773694803,-2.60146897866921,-0.728143980818093,0.941877645535774,2.07847097896079,4.52282207193877]},"columns":[{"accessor":"PC1","name":"PC1","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"aca2c69c20a75f80173fb875e029beb9"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+]
+]
+.panel.panel[.panel-name[Estimated Data]
+.pull-left[
+
+```r
+estimated_data_4 &lt;- 
+  iteration_4_scores %*% iteration_4_loadings_inverse
+```
+]
+.pull-right[
+<div id="htmlwidget-7a6512cee05a3024a310" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-7a6512cee05a3024a310">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-2.5871520657215,-1.59731900267004,-0.447085176405033,0.578319047330722,1.27619480317256,2.77704239429329],"DBP":[-3.32576502348371,-2.05334187379682,-0.574724718313472,0.743424897790288,1.64053906833626,3.56986764946746]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"45dc1d130ddd580e847ac6ac28af1200"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+]
+]
+.panel.panel[.panel-name[Objective]
+.pull-left[
+
+```r
+objective_4 &lt;- 
+  sum((missing_data - estimated_data_4)^2, na.rm = TRUE)
+```
+]
+.pull-right[
+
+```
+#&gt; [1] 1.377636
+```
+]
+]
+.panel.panel[.panel-name[Iteration 5 Data]
+.pull-left[
+
+```r
+data &lt;- data.frame(
+  SBP = c(-3,-1,-1, 1, 1, 3),
+  DBP = c(-4,-2, 0, 0, 2, 4))
+
+missing_data &lt;- data.frame(
+  SBP = c(-3, NA, -1, 1, 1, NA),
+  DBP = c(NA, -2, 0, NA, 2, 4)
+)
+
+iteration_5_data &lt;- data.frame(
+  SBP = c(-3, -1.6, -1, 1, 1, 2.77),
+  DBP = c(-3.32, -2, 0, 0.74, 2, 4)
+)
+```
+]
+.pull-right[
+<div id="htmlwidget-c851a7205f7a9b5237f0" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-c851a7205f7a9b5237f0">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,-1.6,-1,1,1,2.77],"DBP":[-3.32,-2,0,0.74,2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"8a2ca18e2ed98071cf84791ed46cecd1"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+]
+]
+]
+
+---
+
+# 12.3 Missing Values and Matrix Completion
+
+.panelset[
+.panel.panel[.panel-name[Iteration 5 Data]
+.pull-left[
+
+```r
+iteration_5_data &lt;- data.frame(
+  SBP = c(-3, -1.6, -1, 1, 1, 2.77),
+  DBP = c(-3.32, -2, 0, 0.74, 2, 4)
+)
+```
+]
+.pull-right[
+<div id="htmlwidget-93f35aec33adb4274f39" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-93f35aec33adb4274f39">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,-1.6,-1,1,1,2.77],"DBP":[-3.32,-2,0,0.74,2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"8a2ca18e2ed98071cf84791ed46cecd1"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+]
+]
+
+.panel.panel[.panel-name[Loadings Inverse]
+.pull-left[
+
+```r
+iteration_5_pca &lt;- 
+  prcomp(iteration_5_data)
+
+iteration_5_loadings &lt;- 
+  iteration_5_pca$rotation
+```
+
+
+```r
+iteration_5_inverse &lt;- 
+  solve(iteration_5_loadings)["PC1",,drop = FALSE]
+```
+]
+.pull-right[
+<div id="htmlwidget-e306aef42436170a7034" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-e306aef42436170a7034">{"x":{"tag":{"name":"Reactable","attribs":{"data":{".rownames":["SBP","DBP"],"PC1":[0.618637137050694,0.785676837294903],"PC2":[-0.785676837294903,0.618637137050694]},"columns":[{"accessor":".rownames","name":"","type":"character","sortable":false,"filterable":false,"rowHeader":true},{"accessor":"PC1","name":"PC1","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"PC2","name":"PC2","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":2,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"67050c6f2a17f1ddbee575948b7051a8"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+&lt;br&gt;
+&lt;br&gt;
+<div id="htmlwidget-96adf0fcb420a664ae8f" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-96adf0fcb420a664ae8f">{"x":{"tag":{"name":"Reactable","attribs":{"data":{".rownames":["PC1"],"SBP":[0.618637137050694],"DBP":[0.785676837294903]},"columns":[{"accessor":".rownames","name":"","type":"character","sortable":false,"filterable":false,"rowHeader":true},{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":2,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"602ffa87fb593eb4e466650db9de2d9e"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+]
+]
+
+.panel.panel[.panel-name[Scores]
+.pull-left[
+
+```r
+# iteration_5_pca &lt;- 
+#   prcomp(iteration_5_data)
+
+iteration_5_scores &lt;- 
+  iteration_5_pca$x[,"PC1",drop = FALSE]
+```
+]
+.pull-right[
+<div id="htmlwidget-0d405e3d9c81c9a4a8a9" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-0d405e3d9c81c9a4a8a9">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"PC1":[-4.56472389183894,-2.6615384747387,-0.719002517918475,1.09967261578114,2.08962543077272,4.75596683794225]},"columns":[{"accessor":"PC1","name":"PC1","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"2a8b17932f7daeaed6fe647e626a7af8"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+]
+]
+.panel.panel[.panel-name[Estimated Data]
+.pull-left[
+
+```r
+estimated_data_5 &lt;- 
+  iteration_5_scores %*% iteration_5_loadings_inverse
+```
+]
+.pull-right[
+<div id="htmlwidget-aed4659dae1569fb71e4" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-aed4659dae1569fb71e4">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-2.82390771987414,-1.64652654216262,-0.444801659217326,0.680298318719893,1.29271989400156,2.94221770853264],"DBP":[-3.5863978304645,-2.0911091311714,-0.564903624285259,0.86398730282674,1.64177029958051,3.73665298351391]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"277a243b9cff22fbcce1b9bfa6d0ad52"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+]
+]
+.panel.panel[.panel-name[Objective]
+.pull-left[
+
+```r
+objective_5 &lt;- 
+  sum((missing_data - estimated_data_5)^2, na.rm = TRUE)
+```
+]
+.pull-right[
+
+```
+#&gt; [1] 1.052245
+```
+]
+]
+.panel.panel[.panel-name[Iteration 6 Data]
+.pull-left[
+
+```r
+data &lt;- data.frame(
+  SBP = c(-3,-1,-1, 1, 1, 3),
+  DBP = c(-4,-2, 0, 0, 2, 4))
+
+missing_data &lt;- data.frame(
+  SBP = c(-3, NA, -1, 1, 1, NA),
+  DBP = c(NA, -2, 0, NA, 2, 4)
+)
+
+iteration_6_data &lt;- data.frame(
+  SBP = c(-3, -1.65, -1, 1, 1, 2.94),
+  DBP = c(-3.58, -2, 0, 0.86, 2, 4)
+)
+```
+]
+.pull-right[
+<div id="htmlwidget-c33d71b35c3b3ed62954" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-c33d71b35c3b3ed62954">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,-1.65,-1,1,1,2.94],"DBP":[-3.58,-2,0,0.86,2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"f1d4832150db855af027b1da6bdc2f07"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+]
+]
+]
+
+---
+
+# 12.3 Missing Values and Matrix Completion
+
+.panelset[
+.panel.panel[.panel-name[Iteration 6 Data]
+.pull-left[
+
+```r
+iteration_6_data &lt;- data.frame(
+  SBP = c(-3, -1.65, -1, 1, 1, 2.94),
+  DBP = c(-3.58, -2, 0, 0.86, 2, 4)
+)
+```
+]
+.pull-right[
+<div id="htmlwidget-1a635cd15aa8261f70e6" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-1a635cd15aa8261f70e6">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,-1.65,-1,1,1,2.94],"DBP":[-3.58,-2,0,0.86,2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"f1d4832150db855af027b1da6bdc2f07"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+]
+]
+
+.panel.panel[.panel-name[Loadings Inverse]
+.pull-left[
+
+```r
+iteration_6_pca &lt;- 
+  prcomp(iteration_6_data)
+
+iteration_6_loadings &lt;- 
+  iteration_6_pca$rotation
+```
+
+
+```r
+iteration_6_inverse &lt;- 
+  solve(iteration_6_loadings)["PC1",,drop = FALSE]
+```
+]
+.pull-right[
+<div id="htmlwidget-3414b451d9d533700410" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-3414b451d9d533700410">{"x":{"tag":{"name":"Reactable","attribs":{"data":{".rownames":["SBP","DBP"],"PC1":[0.618019350877556,0.786162885120433],"PC2":[-0.786162885120433,0.618019350877556]},"columns":[{"accessor":".rownames","name":"","type":"character","sortable":false,"filterable":false,"rowHeader":true},{"accessor":"PC1","name":"PC1","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"PC2","name":"PC2","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":2,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"e9b72cb9c8db695ec16801a752bfa7d0"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+&lt;br&gt;
+&lt;br&gt;
+<div id="htmlwidget-ca65b3e4b96c384dd118" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-ca65b3e4b96c384dd118">{"x":{"tag":{"name":"Reactable","attribs":{"data":{".rownames":["PC1"],"SBP":[0.618019350877556],"DBP":[0.786162885120433]},"columns":[{"accessor":".rownames","name":"","type":"character","sortable":false,"filterable":false,"rowHeader":true},{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":2,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"e65c3acbbc011818806efaebc3dcfe57"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+]
+]
+
+.panel.panel[.panel-name[Scores]
+.pull-left[
+
+```r
+# iteration_6_pca &lt;- 
+#   prcomp(iteration_6_data)
+
+iteration_6_scores &lt;- 
+  iteration_6_pca$x[,"PC1",drop = FALSE]
+```
+]
+.pull-right[
+<div id="htmlwidget-7afe1e7fcbc4848fa896" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-7afe1e7fcbc4848fa896">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"PC1":[-4.76310364033567,-2.68664015816068,-0.712601809849405,1.19953697310928,2.09576266214658,4.8670459730899]},"columns":[{"accessor":"PC1","name":"PC1","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"4db348d6e9bc8883ed44f377c9a0854d"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+]
+]
+.panel.panel[.panel-name[Estimated Data]
+.pull-left[
+
+```r
+estimated_data_6 &lt;- 
+  iteration_6_scores %*% iteration_6_loadings_inverse
+```
+]
+.pull-right[
+<div id="htmlwidget-c69ef4b40f6541fb9c26" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-c69ef4b40f6541fb9c26">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-2.94369021996278,-1.66039560658804,-0.440401707957301,0.741337061474627,1.29522188005325,3.00792859298025],"DBP":[-3.74457530001393,-2.11213677802002,-0.560221094773251,0.943031447588224,1.64761082100083,3.82629090421814]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"244b4c3be2dd96aa0cd82d4c5914b552"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+]
+]
+.panel.panel[.panel-name[Objective]
+.pull-left[
+
+```r
+objective_6 &lt;- 
+  sum((missing_data - estimated_data_6)^2, na.rm = TRUE)
+```
+]
+.pull-right[
+
+```
+#&gt; [1] 0.9511588
+```
+]
+]
+.panel.panel[.panel-name[Iteration 7 Data]
+.pull-left[
+
+```r
+data &lt;- data.frame(
+  SBP = c(-3,-1,-1, 1, 1, 3),
+  DBP = c(-4,-2, 0, 0, 2, 4))
+
+missing_data &lt;- data.frame(
+  SBP = c(-3, NA, -1, 1, 1, NA),
+  DBP = c(NA, -2, 0, NA, 2, 4)
+)
+
+iteration_7_data &lt;- data.frame(
+  SBP = c(-3, -1.66, -1, 1, 1, 3.01),
+  DBP = c(-3.74, -2, 0, 0.94, 2, 4)
+)
+```
+]
+.pull-right[
+<div id="htmlwidget-3d7921c4a2cd9f78cf0d" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-3d7921c4a2cd9f78cf0d">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,-1.66,-1,1,1,3.01],"DBP":[-3.74,-2,0,0.94,2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"7fd9e22af5d648505d43e7cac10e8447"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+]
+]
+]
+
+---
+
+# 12.3 Missing Values and Matrix Completion
+
+.panelset[
+.panel.panel[.panel-name[Iteration 7 Data]
+.pull-left[
+
+```r
+iteration_7_data &lt;- data.frame(
+  SBP = c(-3, -1.66, -1, 1, 1, 3.01),
+  DBP = c(-3.74, -2, 0, 0.94, 2, 4)
+)
+```
+]
+.pull-right[
+<div id="htmlwidget-767486a234a58d65c78d" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-767486a234a58d65c78d">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,-1.66,-1,1,1,3.01],"DBP":[-3.74,-2,0,0.94,2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"7fd9e22af5d648505d43e7cac10e8447"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+]
+]
+
+.panel.panel[.panel-name[Loadings Inverse]
+.pull-left[
+
+```r
+iteration_7_pca &lt;- 
+  prcomp(iteration_7_data)
+
+iteration_7_loadings &lt;- 
+  iteration_7_pca$rotation
+```
+
+
+```r
+iteration_7_inverse &lt;- 
+  solve(iteration_7_loadings)["PC1",,drop = FALSE]
+```
+]
+.pull-right[
+<div id="htmlwidget-04a6657fee612903af9e" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-04a6657fee612903af9e">{"x":{"tag":{"name":"Reactable","attribs":{"data":{".rownames":["SBP","DBP"],"PC1":[0.615031197318046,0.788502775090571],"PC2":[-0.788502775090571,0.615031197318046]},"columns":[{"accessor":".rownames","name":"","type":"character","sortable":false,"filterable":false,"rowHeader":true},{"accessor":"PC1","name":"PC1","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"PC2","name":"PC2","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":2,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"c18d4a4cd714f9b813e42f7a873732de"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+&lt;br&gt;
+&lt;br&gt;
+<div id="htmlwidget-f52e7f8573733dea03d1" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-f52e7f8573733dea03d1">{"x":{"tag":{"name":"Reactable","attribs":{"data":{".rownames":["PC1"],"SBP":[0.615031197318046],"DBP":[0.788502775090571]},"columns":[{"accessor":".rownames","name":"","type":"character","sortable":false,"filterable":false,"rowHeader":true},{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":2,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"1ceb3102e4acb497f334ae2d4d07f639"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+]
+]
+
+.panel.panel[.panel-name[Scores]
+.pull-left[
+
+```r
+# iteration_7_pca &lt;- 
+#   prcomp(iteration_7_data)
+
+iteration_7_scores &lt;- 
+  iteration_7_pca$x[,"PC1",drop = FALSE]
+```
+]
+.pull-right[
+<div id="htmlwidget-7e1a61ede92369eeb246" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-7e1a61ede92369eeb246">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"PC1":[-4.88516614610153,-2.68902951303776,-0.706103372626705,1.26515163059452,2.10096457219053,4.91418282898094]},"columns":[{"accessor":"PC1","name":"PC1","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"7651aef1acbd8551623be07ae9a95c9f"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+]
+]
+.panel.panel[.panel-name[Estimated Data]
+.pull-left[
+
+```r
+estimated_data_7 &lt;- 
+  iteration_7_scores %*% iteration_7_loadings_inverse
+```
+]
+.pull-right[
+<div id="htmlwidget-17356f439fbc85a7a96f" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-17356f439fbc85a7a96f">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3.00452958393441,-1.65383704102717,-0.434275602696913,0.778107722153428,1.29215875635714,3.02237574914793],"DBP":[-3.85196706297957,-2.12030723333072,-0.556764468816968,0.997575571634142,1.6566163955392,3.8748467979539]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"1884ab03ce203fddf19bb8de01852703"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+]
+]
+.panel.panel[.panel-name[Objective]
+.pull-left[
+
+```r
+objective_7 &lt;- 
+  sum((missing_data - estimated_data_7)^2, na.rm = TRUE)
+```
+]
+.pull-right[
+
+```
+#&gt; [1] 0.9126937
+```
+]
+]
+.panel.panel[.panel-name[Iteration 8 Data]
+.pull-left[
+
+```r
+data &lt;- data.frame(
+  SBP = c(-3,-1,-1, 1, 1, 3),
+  DBP = c(-4,-2, 0, 0, 2, 4))
+
+missing_data &lt;- data.frame(
+  SBP = c(-3, NA, -1, 1, 1, NA),
+  DBP = c(NA, -2, 0, NA, 2, 4)
+)
+
+iteration_8_data &lt;- data.frame(
+  SBP = c(-3, -1.65, -1, 1, 1, 3.87),
+  DBP = c(-3.85, -2, 0, 1, 2, 4)
+)
+```
+]
+.pull-right[
+<div id="htmlwidget-e5d7f4a1fcb8aeba0dd2" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-e5d7f4a1fcb8aeba0dd2">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,-1.65,-1,1,1,3.87],"DBP":[-3.85,-2,0,1,2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"01e77bd4aefd2cc175a1d0e864e40eef"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+]
+]
+]
+
+---
+
+# 12.3 Missing Values and Matrix Completion
+
+.panelset[
+.panel.panel[.panel-name[Iteration 8 Data]
+.pull-left[
+
+```r
+iteration_8_data &lt;- data.frame(
+  SBP = c(-3, -1.65, -1, 1, 1, 3.87),
+  DBP = c(-3.85, -2, 0, 1, 2, 4)
+)
+```
+]
+.pull-right[
+<div id="htmlwidget-73dd917a1b1287221f8e" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-73dd917a1b1287221f8e">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,-1.65,-1,1,1,3.87],"DBP":[-3.85,-2,0,1,2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"01e77bd4aefd2cc175a1d0e864e40eef"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+]
+]
+
+.panel.panel[.panel-name[Loadings Inverse]
+.pull-left[
+
+```r
+iteration_8_pca &lt;- 
+  prcomp(iteration_8_data)
+
+iteration_8_loadings &lt;- 
+  iteration_8_pca$rotation
+```
+
+
+```r
+iteration_8_inverse &lt;- 
+  solve(iteration_8_loadings)["PC1",,drop = FALSE]
+```
+]
+.pull-right[
+<div id="htmlwidget-49094d0c66cbf217efa9" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-49094d0c66cbf217efa9">{"x":{"tag":{"name":"Reactable","attribs":{"data":{".rownames":["SBP","DBP"],"PC1":[0.652977065595913,0.757377681085039],"PC2":[-0.757377681085039,0.652977065595913]},"columns":[{"accessor":".rownames","name":"","type":"character","sortable":false,"filterable":false,"rowHeader":true},{"accessor":"PC1","name":"PC1","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"PC2","name":"PC2","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":2,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"e93bb40d6cb7e3420df2162738f2b941"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+&lt;br&gt;
+&lt;br&gt;
+<div id="htmlwidget-34345614c76f9217b953" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-34345614c76f9217b953">{"x":{"tag":{"name":"Reactable","attribs":{"data":{".rownames":["PC1"],"SBP":[0.652977065595913],"DBP":[0.757377681085039]},"columns":[{"accessor":".rownames","name":"","type":"character","sortable":false,"filterable":false,"rowHeader":true},{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":2,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"2245e36b08fd4546ff98d4b6781983b1"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+]
+]
+
+.panel.panel[.panel-name[Scores]
+.pull-left[
+
+```r
+# iteration_8_pca &lt;- 
+#   prcomp(iteration_8_data)
+
+iteration_8_scores &lt;- 
+  iteration_8_pca$x[,"PC1",drop = FALSE]
+```
+]
+.pull-right[
+<div id="htmlwidget-21fc6988841c138f30c5" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-21fc6988841c138f30c5">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"PC1":[-5.04394181691162,-2.76127406834982,-0.822083613542395,1.24124819873447,1.99862587981951,5.38742542024986]},"columns":[{"accessor":"PC1","name":"PC1","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"2ec595f27c7e5094741268521a654187"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+]
+]
+.panel.panel[.panel-name[Estimated Data]
+.pull-left[
+
+```r
+estimated_data_8 &lt;- 
+  iteration_8_scores %*% iteration_8_loadings_inverse
+```
+]
+.pull-right[
+<div id="htmlwidget-a097ed640ceb6345fd31" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-a097ed640ceb6345fd31">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3.29357832664347,-1.80304863845715,-0.536801745645398,0.810506606485846,1.30505686222859,3.51786524203158],"DBP":[-3.82016895682038,-2.09132735072704,-0.622627780882749,0.940093682408494,1.51371463421425,4.08031577180743]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"c231ec645c8493d5e9aac3f661b25fcd"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+]
+]
+.panel.panel[.panel-name[Objective]
+.pull-left[
+
+```r
+objective_8 &lt;- 
+  sum((missing_data - estimated_data_8)^2, na.rm = TRUE)
+```
+]
+.pull-right[
+
+```
+#&gt; [1] 1.068638
+```
+]
+]
+]
+
 
 ---
 
