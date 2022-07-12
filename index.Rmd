@@ -2189,3 +2189,14 @@ Kmeans and hierarchical clustering force every observation into a cluster, the
 clusters found may be heavily distorted due to the presence of outliers that do not belong to any cluster.
 
 Clustering methods generally are not very robust to perturbations to the data. We recommend clustering subsets of the data in order to get a sense of the robustness of the clusters obtained.
+
+---
+
+# 12.4.3 Practical Issues in Clustering
+
+EduClust [webpage](https://educlust.dbvis.de/)
+
+```{r echo = FALSE, out.width="70%"}
+knitr::include_graphics("img/EduClust.jpg")
+```
+
