@@ -396,6 +396,17 @@ missing_data <- data.frame(
 
 ismiss <- is.na(missing_data)
 ```
+
+```{r, echo=FALSE}
+
+colour_missing_cells <- function(value, index, name) {
+   missing_indices <- which(is.na(missing_data[[name]]))
+   if (index %in% missing_indices) {
+     list(background = "#aaf0f8")
+   }
+ }
+```
+
 ]
 .pull-right[
 ```{r, echo=FALSE}
@@ -412,6 +423,9 @@ missing_data %>%
     columns = list(
       SBP = reactable::colDef(format = reactable::colFormat(digits = 2)),
       DBP = reactable::colDef(format = reactable::colFormat(digits = 2))
+    ),
+    defaultColDef = reactable::colDef(
+      style = colour_missing_cells
     )
     )
 ```
@@ -441,6 +455,9 @@ initialisation_data %>%
     columns = list(
       SBP = reactable::colDef(format = reactable::colFormat(digits = 2)),
       DBP = reactable::colDef(format = reactable::colFormat(digits = 2))
+    ),
+    defaultColDef = reactable::colDef(
+      style = colour_missing_cells
     )
     )
 ```
@@ -509,6 +526,9 @@ initialisation_data_pca %>%
     columns = list(
       SBP = reactable::colDef(format = reactable::colFormat(digits = 2)),
       DBP = reactable::colDef(format = reactable::colFormat(digits = 2))
+    ),
+    defaultColDef = reactable::colDef(
+      style = colour_missing_cells
     )
     )
 
@@ -600,6 +620,9 @@ data %>%
     columns = list(
       SBP = reactable::colDef(format = reactable::colFormat(digits = 2)),
       DBP = reactable::colDef(format = reactable::colFormat(digits = 2))
+    ),
+    defaultColDef = reactable::colDef(
+      style = colour_missing_cells
     )
     )
 ```
@@ -613,8 +636,50 @@ initialisation_data_pca %>%
     columns = list(
       SBP = reactable::colDef(format = reactable::colFormat(digits = 2)),
       DBP = reactable::colDef(format = reactable::colFormat(digits = 2))
+    ),
+    defaultColDef = reactable::colDef(
+      style = colour_missing_cells
     )
     )
+```
+]
+
+---
+
+# 12.3 Missing Values and Matrix Completion
+
+.pull-left[
+Actual Data
+```{r, echo=FALSE}
+data %>%
+  reactable::reactable(
+    defaultPageSize = 6,
+    columns = list(
+      SBP = reactable::colDef(format = reactable::colFormat(digits = 2)),
+      DBP = reactable::colDef(format = reactable::colFormat(digits = 2))
+    ),
+    defaultColDef = reactable::colDef(
+      style = colour_missing_cells
+    )
+    )
+```
+]
+.pull-right[
+
+Soft Imputed Data
+```{r, echo=FALSE}
+fits <- softImpute::softImpute(missing_data, type = "svd")
+softImpute::complete(missing_data, fits) %>% 
+  reactable::reactable(
+    defaultPageSize = 6,
+    columns = list(SBP = reactable::colDef(format = reactable::colFormat(digits = 2)),
+                   DBP = reactable::colDef(format = reactable::colFormat(digits = 2))
+    ),
+    defaultColDef = reactable::colDef(
+      style = colour_missing_cells
+    )
+    )
+
 ```
 ]
 
