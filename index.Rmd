@@ -218,6 +218,8 @@ knitr::include_graphics("img/scores.jpg")
 
 Each principal component loadings $\phi_{j} = (\phi_{1j}, \phi_{2j}, . . ., \phi_{pj})^{T}$ is optimised such that
 
+$$\underset{\phi_{1j},...,\phi_{pj}}{\text{maximize}\space} \{ \frac{1}{n} \sum_{i=1}^{n}( \sum_{k=1}^{p}(\phi_{kj}x_{ik}))^2 \}  \space \text{subject to} \sum_{k=1}^{p}(\phi_{kj})^2 = 1$$
+
 where $\sum_{k=1}^{p}(\phi_{kj}x_{ik}) = z_{ij}$ are the scores in the principal component $Z_j$.
 
 As the mean of the scores $z_{ij}$ is $0$, $\frac{1}{n} \sum_{i=1}^{n}(z_{ij} - 0)^2$ is the sample variance of the scores in the principal component $Z_j$.
