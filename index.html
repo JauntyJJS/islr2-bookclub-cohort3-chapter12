@@ -116,9 +116,7 @@ where the sum of loading squares add up to one or  `\(\sum_{k=1}^{p}(\phi_{kj})^
 
 # 12.2.1 What Are Principal Components?
 
-These `\(M\)` loadings make up the principal component loading vector/direction, 
-
-`$$\phi_{j} = (\phi_{1j}, \phi_{2j}, . . ., \phi_{pj})^{T}$$`
+These `\(M\)` loadings make up the principal component loading vector/direction, `\(\phi_{j} = (\phi_{1j}, \phi_{2j},..., \phi_{pj})^{T}\)`
 
 
 &lt;img src="img/pca_loadings.jpg" width="70%" style="display: block; margin: auto;" /&gt;
@@ -349,8 +347,8 @@ data &lt;- data.frame(
 ```
 ]
 .pull-right[
-<div id="htmlwidget-d1863d440b9a72b1d64c" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-d1863d440b9a72b1d64c">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,-1,-1,1,1,3],"DBP":[-4,-2,0,0,2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"70b9f792dae02a270ba873e526d1b3c0"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-515a819371ae09d4a49e" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-515a819371ae09d4a49e">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,-1,-1,1,1,3],"DBP":[-4,-2,0,0,2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"70b9f792dae02a270ba873e526d1b3c0"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 ]
 ]
 
@@ -370,8 +368,8 @@ ismiss &lt;- is.na(missing_data)
 
 ]
 .pull-right[
-<div id="htmlwidget-c7578f35a79c9538d2fc" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-c7578f35a79c9538d2fc">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,"NA",-1,1,1,"NA"],"DBP":["NA",-2,0,"NA",2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","style":[null,{"background":"#aaf0f8"},null,null,null,{"background":"#aaf0f8"}],"format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","style":[{"background":"#aaf0f8"},null,null,{"background":"#aaf0f8"},null,null],"format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"16541ce108ac7a9d09c6f08731529ef1"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-6de6519d8b9e3774042a" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-6de6519d8b9e3774042a">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,"NA",-1,1,1,"NA"],"DBP":["NA",-2,0,"NA",2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","style":[null,{"background":"#aaf0f8"},null,null,null,{"background":"#aaf0f8"}],"format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","style":[{"background":"#aaf0f8"},null,null,{"background":"#aaf0f8"},null,null],"format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"16541ce108ac7a9d09c6f08731529ef1"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 ]
 ]
 
@@ -388,8 +386,8 @@ initialisation_data &lt;- data.frame(
 ```
 ]
 .pull-right[
-<div id="htmlwidget-d745ea811c38b60f2dfa" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-d745ea811c38b60f2dfa">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,-0.5,-1,1,1,-0.5],"DBP":[1,-2,0,1,2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","style":[null,{"background":"#aaf0f8"},null,null,null,{"background":"#aaf0f8"}],"format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","style":[{"background":"#aaf0f8"},null,null,{"background":"#aaf0f8"},null,null],"format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"32d866b345a319865cce1e44725fefae"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-ba464b3771ffcc95afd6" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-ba464b3771ffcc95afd6">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,-0.5,-1,1,1,-0.5],"DBP":[1,-2,0,1,2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","style":[null,{"background":"#aaf0f8"},null,null,null,{"background":"#aaf0f8"}],"format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","style":[{"background":"#aaf0f8"},null,null,{"background":"#aaf0f8"},null,null],"format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"32d866b345a319865cce1e44725fefae"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 ]
 ]
 
@@ -436,8 +434,8 @@ initialisation_data_pca[ismiss] &lt;- Xapp[ismiss]
 ]
 .pull-right[
 
-<div id="htmlwidget-1cbd2f5dced3f2ea2da3" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-1cbd2f5dced3f2ea2da3">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,0.14384952667793,-1,1,1,-0.295796456590457],"DBP":[1.21442472281113,-2,0,0.921327400632204,2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","style":[null,{"background":"#aaf0f8"},null,null,null,{"background":"#aaf0f8"}],"format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","style":[{"background":"#aaf0f8"},null,null,{"background":"#aaf0f8"},null,null],"format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"f69c3dc293641e179690916105e98135"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-7c56aaddc09f4ea2bbdf" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-7c56aaddc09f4ea2bbdf">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,0.14384952667793,-1,1,1,-0.295796456590457],"DBP":[1.21442472281113,-2,0,0.921327400632204,2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","style":[null,{"background":"#aaf0f8"},null,null,null,{"background":"#aaf0f8"}],"format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","style":[{"background":"#aaf0f8"},null,null,{"background":"#aaf0f8"},null,null],"format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"f69c3dc293641e179690916105e98135"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 ]
 ]
 
@@ -516,13 +514,13 @@ while(rel_err &gt; thresh) {
 
 .pull-left[
 Actual Data
-<div id="htmlwidget-b110c257328d4b4d1f18" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-b110c257328d4b4d1f18">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,-1,-1,1,1,3],"DBP":[-4,-2,0,0,2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","style":[null,{"background":"#aaf0f8"},null,null,null,{"background":"#aaf0f8"}],"format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","style":[{"background":"#aaf0f8"},null,null,{"background":"#aaf0f8"},null,null],"format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"a02ab76ae6a3708d43a6b74f6caa7f0e"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-a235b7824892b3530aec" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-a235b7824892b3530aec">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,-1,-1,1,1,3],"DBP":[-4,-2,0,0,2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","style":[null,{"background":"#aaf0f8"},null,null,null,{"background":"#aaf0f8"}],"format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","style":[{"background":"#aaf0f8"},null,null,{"background":"#aaf0f8"},null,null],"format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"a02ab76ae6a3708d43a6b74f6caa7f0e"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 ]
 .pull-right[
 Imputed Data
-<div id="htmlwidget-7c425007a02e672c3678" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-7c425007a02e672c3678">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,1.28266147864382,-1,1,1,-2.56532296378831],"DBP":[4.38256755539688,-2,0,-1.29003636881543,2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","style":[null,{"background":"#aaf0f8"},null,null,null,{"background":"#aaf0f8"}],"format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","style":[{"background":"#aaf0f8"},null,null,{"background":"#aaf0f8"},null,null],"format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"b231b3041e26d2f3bd0c81e38fa726c7"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-9964d87b8ebce3b34c45" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-9964d87b8ebce3b34c45">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,1.28266147864382,-1,1,1,-2.56532296378831],"DBP":[4.38256755539688,-2,0,-1.29003636881543,2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","style":[null,{"background":"#aaf0f8"},null,null,null,{"background":"#aaf0f8"}],"format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","style":[{"background":"#aaf0f8"},null,null,{"background":"#aaf0f8"},null,null],"format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"b231b3041e26d2f3bd0c81e38fa726c7"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 ]
 
 ---
@@ -531,14 +529,14 @@ Imputed Data
 
 .pull-left[
 Actual Data
-<div id="htmlwidget-3775d9e166783ad85819" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-3775d9e166783ad85819">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,-1,-1,1,1,3],"DBP":[-4,-2,0,0,2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","style":[null,{"background":"#aaf0f8"},null,null,null,{"background":"#aaf0f8"}],"format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","style":[{"background":"#aaf0f8"},null,null,{"background":"#aaf0f8"},null,null],"format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"a02ab76ae6a3708d43a6b74f6caa7f0e"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-b89668ebf61d268a9fb0" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-b89668ebf61d268a9fb0">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,-1,-1,1,1,3],"DBP":[-4,-2,0,0,2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","style":[null,{"background":"#aaf0f8"},null,null,null,{"background":"#aaf0f8"}],"format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","style":[{"background":"#aaf0f8"},null,null,{"background":"#aaf0f8"},null,null],"format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"a02ab76ae6a3708d43a6b74f6caa7f0e"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 ]
 .pull-right[
 
 Soft Imputed Data
-<div id="htmlwidget-11f39e362b1096dbf7b7" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-11f39e362b1096dbf7b7">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,-1.42293242457236,-1,1,1,2.84586484914471],"DBP":[-4.18812805883708,-2,0,1.39604268627903,2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","style":[null,{"background":"#aaf0f8"},null,null,null,{"background":"#aaf0f8"}],"format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","style":[{"background":"#aaf0f8"},null,null,{"background":"#aaf0f8"},null,null],"format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"af935ee1c0fe2078fec87fb1b1472010"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-c181304b76e755cd0954" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-c181304b76e755cd0954">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"SBP":[-3,-1.42293242457236,-1,1,1,2.84586484914471],"DBP":[-4.18812805883708,-2,0,1.39604268627903,2,4]},"columns":[{"accessor":"SBP","name":"SBP","type":"numeric","style":[null,{"background":"#aaf0f8"},null,null,null,{"background":"#aaf0f8"}],"format":{"cell":{"digits":2},"aggregated":{"digits":2}}},{"accessor":"DBP","name":"DBP","type":"numeric","style":[{"background":"#aaf0f8"},null,null,{"background":"#aaf0f8"},null,null],"format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"defaultPageSize":6,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"af935ee1c0fe2078fec87fb1b1472010"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 ]
 
 ---
