@@ -180,7 +180,10 @@ knitr::include_graphics("img/figure_6_14.jpg")
 
 # 12.2.1 What Are Principal Components?
 
-These $M$ loadings make up the principal component loading vector/direction, $\phi_{j} = (\phi_{1j}, \phi_{2j}, . . ., \phi_{pj})^{T}$. 
+These $M$ loadings make up the principal component loading vector/direction, 
+
+$$\phi_{j} = (\phi_{1j}, \phi_{2j}, . . ., \phi_{pj})^{T}$$
+
 
 ```{r echo = FALSE, out.width="70%"}
 knitr::include_graphics("img/pca_loadings.jpg")
