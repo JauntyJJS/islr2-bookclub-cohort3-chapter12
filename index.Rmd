@@ -622,6 +622,11 @@ mss_old_pca
 ```{r echo = FALSE, out.width="100%"}
 knitr::include_graphics("img/algorithm_12_1_2.jpg")
 ```
+
+```{r echo = FALSE, out.width="100%"}
+
+knitr::include_graphics("img/algorithm_12_1_2_objective.jpg")
+```
 ]
 ]
 ]
