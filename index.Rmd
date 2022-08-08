@@ -154,7 +154,7 @@ Image from https://www.sciencedirect.com/science/article/pii/S1532046415001380
 
 # 12.2 Principal Components Analysis (PCA)
 
-When we have a large set of (preferably correlated) features $X_1,X_2,...,X_p$, PCA helps to summarise them into a smaller number of representative variables (called principal component) $Z_1,Z_2, . . . ,Z_M$, where $M < p$ that helps to explain most of the variability in the original set. $Z_1,Z_2,...,Z_M$ are also called principal components.
+When we have a large set of (preferably correlated) features $X_1,X_2,...,X_p$, PCA helps to summarise them into a smaller number of representative variables, $Z_1,Z_2, . . . ,Z_M$, where $M < p$ that helps to explain most of the variability in the original set. $Z_1,Z_2,...,Z_M$ are also called principal components.
 
 ```{r echo = FALSE, out.width="70%"}
 knitr::include_graphics("img/figure_6_14.jpg")
