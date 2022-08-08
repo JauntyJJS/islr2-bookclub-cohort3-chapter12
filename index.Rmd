@@ -356,7 +356,7 @@ Using $TSS$ as the total sum of squared elements of $X$, and $RSS$ as the residu
 
 $$ \sum_{m=1}^{M}PVE_m = 1 - \frac{RSS}{TSS} = R^2$$
 
-We can interpret the cumulative PVE as the $R^2$ of the approximation for $X$ given by the first $M$ principal components
+We can interpret the cumulative $PVE$ as the $R^2$ of the approximation for $X$ given by the first $M$ principal components
 
 ---
 
