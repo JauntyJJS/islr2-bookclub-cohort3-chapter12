@@ -278,7 +278,7 @@ $x_{ij} - \sum_{k=1}^{p}(z_{ik}\phi_{kj})$ will get smaller as $M$ gets closer t
 
 # 12.2.3 The Proportion of Variance Explained
 
-Variance represents how much information for a given data is loss as a result by projecting the observations onto the first few principal components. We define some parameters.
+Variance represents how much information for a given data is lost as a result of projecting the observations onto the first few principal components. We define some parameters.
 
 The total variance present in a data set (assuming that the variables have mean $0$) is
 
